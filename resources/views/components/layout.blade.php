@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pixel Positions</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link href="https://fonts.cdnfonts.com/css/hanken-grotesk" rel="stylesheet">
+
 </head>
 
 <body class="bg-black text-2xl text-white">
@@ -24,7 +26,7 @@
             </div>
             <div><a href="#">Post a job</a></div>
         </nav>
-        <main class="mt-10 max-w-[986px] mx-auto">
+        <main class="mt-10 max-w-[1286px] mx-auto">
 
             {{ $slot }}
 
