@@ -11,7 +11,7 @@
 
 </head>
 
-<body class="bg-black text-2xl text-white">
+<body class="bg-black text-2xl text-white pb-20">
     <div class="px-10 m-10">
         <nav class="flex justify-between items-center   border-b border-white/80 p-6">
             <div><a href="">
