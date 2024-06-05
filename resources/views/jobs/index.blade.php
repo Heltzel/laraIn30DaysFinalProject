@@ -2,10 +2,13 @@
     <div class="space-y-10">
         <section class="text-center pt-6">
             <h1 class="font-bold text-6xl">Let's find your next job...</h1>
-            <form action=""class="mt-6 mb-8">
+            {{-- <form action=""class="mt-6 mb-8">
                 <input type="text" name="" id="" placeholder="Job title..."
                     class="rounded-xl bg-white/15 px-8 py-4 mt-4 w-full max-w-xl" />
-            </form>
+            </form> --}}
+            <x-forms.form action="/search" class="mt-6 mb-8">
+                <x-forms.input :label="false" name='query' placeholder="webdeveloper ..." />
+            </x-forms.form>
         </section>
         <section>
             <x-section-heading>Featured Jobs</x-section-heading>
