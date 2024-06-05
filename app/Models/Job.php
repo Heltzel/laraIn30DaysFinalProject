@@ -12,6 +12,15 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 class Job extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'title',
+        'salary',
+        'location',
+        'schedule',
+        'url',
+        'fetured',
+        'tag',
+    ];
 
     public function tag(string $name): void
     {

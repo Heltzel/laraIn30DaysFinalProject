@@ -25,7 +25,9 @@
                 <a href="#">Companies</a>
             </div>
             @auth
-                <div><a href="/jobs/create">Post a job</a></div>
+                <div class="space-x-6 font-bold">
+                    <a href="/jobs/create">Post a job</a>
+                </div>
             @endauth
             @guest
                 <div class="space-x-6 font-bold">
