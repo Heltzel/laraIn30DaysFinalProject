@@ -1,7 +1,7 @@
 @props(['job'])
 <x-panel class="flex gap-x-6">
     <div>
-        <x-employer-logo />
+        <x-employer-logo :employer="$job->employer" :width="84" />
     </div>
     <div class="flex-1 flex flex-col">
         <a href="#" class="self-start text-sm text-gray-400">
