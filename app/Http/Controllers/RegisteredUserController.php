@@ -24,8 +24,6 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request)
     {
-
-        // dd($request->all());
         $userAttributes = $request->validate([
             'name' => ['required'],
             'email' => ['required', 'email', 'unique:users,email'],
@@ -33,11 +31,13 @@ class RegisteredUserController extends Controller
         ]);
 
         $employerAttributes = $request->validate([
-            'employer"' => ['required'],
+            'employer' => ['required'],
             'logo' => ['required', File::types(['png', 'jpg', 'jpeg'])],
         ]);
-        return redirect('/');
+        // dd($request->all());
+
         $user = User::create($userAttributes);
+
         // store logo
         // $request->logo is an instance of Uploadedfile class
         // that make behavior possible like storing it where we like
@@ -47,7 +47,6 @@ class RegisteredUserController extends Controller
             'name' => $employerAttributes['employer'],
             'logo' => $logoPath,
         ]);
-
         Auth::login($user);
         return redirect('/');
     }
